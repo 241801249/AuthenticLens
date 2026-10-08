@@ -65,7 +65,16 @@ def analyze_product(product):
 
         ocr_result = analyze_text(image)
 
-        similarity_result = analyze_similarity(image)
+        reference_images = list_reference_images(product_identity["product_id"])
+        if reference_images:
+            similarity_result = analyze_similarity(image, reference_images)
+        else:
+            similarity_result = {
+                "success": False,
+                "similarity": 0,
+                "risk": 0,
+                "message": "No product-specific reference images available"
+    }
 
         image_risk = similarity_result["risk"]
 

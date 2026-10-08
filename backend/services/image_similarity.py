@@ -97,7 +97,7 @@ def load_reference_images():
     return images
 
 
-def analyze_similarity(image_source):
+def analyze_similarity(image_source, reference_image_paths=None):
 
     try:
 
@@ -105,7 +105,13 @@ def analyze_similarity(image_source):
             image_source
         )
 
-        references = load_reference_images()
+        if reference_image_paths is not None:
+            references = [
+                load_image(path)
+                for path in reference_image_paths
+        ]
+        else:
+            references = load_reference_images()
 
         if not references:
 
