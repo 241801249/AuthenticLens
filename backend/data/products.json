@@ -1,0 +1,38 @@
+{
+    "nike air max 270": {
+        "brand": "Nike",
+        "reference_price": 8999,
+        "colors": [
+            "black",
+            "white",
+            "red",
+            "blue"
+        ],
+        "seller_rating_min": 4.0
+    },
+
+    "samsung galaxy s24": {
+        "brand": "Samsung",
+        "reference_price": 74999,
+        "colors": [
+            "black",
+            "violet",
+            "yellow",
+            "gray"
+        ],
+        "seller_rating_min": 4.0
+    },
+
+    "apple iphone 15": {
+        "brand": "Apple",
+        "reference_price": 69999,
+        "colors": [
+            "black",
+            "blue",
+            "green",
+            "yellow",
+            "pink"
+        ],
+        "seller_rating_min": 4.0
+    }
+}

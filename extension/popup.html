@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Counterfeit Detector</title>
+
+    <link rel="stylesheet" href="popup.css">
+
+</head>
+
+<body>
+
+    <h2>🛡️ Counterfeit Detector</h2>
+
+    <p id="productName">
+        Product not detected
+    </p>
+
+    <button id="analyze">
+        Analyze Product
+    </button>
+
+    <p id="status"></p>
+
+    <div id="productDetails" class="card hidden">
+
+        <h3>Product Details</h3>
+
+        <div id="details"></div>
+
+    </div>
+
+
+    <div id="riskResult" class="card hidden">
+
+        <h3>Risk Analysis</h3>
+
+        <div id="score" class="score">
+            0 / 100
+        </div>
+
+        <div id="level" class="level">
+            LOW RISK
+        </div>
+
+
+        <h4>Risk Features</h4>
+
+        <div id="features"></div>
+
+
+        <h4>AI Image Analysis</h4>
+
+        <div id="aiAnalysis"></div>
+
+
+        <h4>OCR Analysis</h4>
+
+        <div id="ocrAnalysis"></div>
+
+
+        <h4>Warnings</h4>
+
+        <div id="warnings"></div>
+
+    </div>
+
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>

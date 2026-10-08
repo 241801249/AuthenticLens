@@ -1,0 +1,215 @@
+body {
+
+    width: 360px;
+
+    margin: 0;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    background: #f5f7fb;
+
+    color: #222;
+}
+
+
+h2 {
+
+    margin-top: 0;
+
+    text-align: center;
+
+    color: #1f2937;
+}
+
+
+h3 {
+
+    margin-top: 0;
+
+}
+
+
+h4 {
+
+    margin-bottom: 8px;
+
+}
+
+
+#productName {
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin: 15px 0;
+
+}
+
+
+button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #4361ee;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+
+    background: #3049c7;
+
+}
+
+
+button:disabled {
+
+    background: #9ca3af;
+
+    cursor: not-allowed;
+
+}
+
+
+.card {
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.score {
+
+    text-align: center;
+
+    font-size: 36px;
+
+    font-weight: bold;
+
+    margin: 10px 0;
+}
+
+
+.level {
+
+    text-align: center;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+.feature {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 8px 0;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 14px;
+}
+
+
+.ai-box {
+
+    padding: 10px;
+
+    margin-top: 8px;
+
+    background: #f8fafc;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+}
+
+
+.ai-item {
+
+    padding: 5px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.warning {
+
+    margin-top: 8px;
+
+    padding: 9px;
+
+    background: #fff3cd;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+}
+
+
+.success {
+
+    background: #dcfce7;
+
+    padding: 8px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+}
+
+
+.error {
+
+    background: #fee2e2;
+
+    padding: 8px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+}
+
+
+.hidden {
+
+    display: none;
+}
+
+
+#status {
+
+    text-align: center;
+
+    margin-top: 10px;
+
+    font-size: 13px;
+
+    color: #555;
+}

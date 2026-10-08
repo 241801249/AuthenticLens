@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# AI / ML model caches
+.cache/
+.huggingface/
+~/.cache/
+
+# Local model files
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+
+# Test / generated data
+*.log
+uploads/
+outputs/
+tmp/
+temp/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Counterfeit Product Detector",
+    "version": "1.0",
+    "description": "AI-powered counterfeit product detection and risk identification",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>",
+        "http://127.0.0.1:5000/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
