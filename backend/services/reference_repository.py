@@ -31,7 +31,8 @@ def list_reference_images(product_id: str) -> list[str]:
         return []
 
     return [
-        str(path)
-        for path in product_dir.iterdir()
-        if path.is_file()
+    str(path)
+    for path in product_dir.iterdir()
+    if path.is_file()
+    and path.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}
     ]
