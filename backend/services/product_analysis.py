@@ -1,5 +1,6 @@
 import json
 
+from config.settings import PRODUCTS_FILE
 from services.price_analysis import analyze_price
 from services.seller_analysis import analyze_seller
 from services.risk_score import calculate_risk
@@ -8,7 +9,7 @@ from services.ocr_analysis import analyze_text
 from services.image_similarity import analyze_similarity
 
 
-with open("data/products.json", "r") as file:
+with open(PRODUCTS_FILE, "r", encoding="utf-8") as file:
     products = json.load(file)
 
 
