@@ -8,6 +8,10 @@ from services.image_analysis import analyze_image
 from services.ocr_analysis import analyze_text
 from services.image_similarity import analyze_similarity
 
+from services.product_identity import identify_product
+from services.reference_resolver import resolve_reference
+from services.reference_repository import list_reference_images
+
 
 with open(PRODUCTS_FILE, "r", encoding="utf-8") as file:
     products = json.load(file)
@@ -22,10 +26,10 @@ def analyze_product(product):
     image = product.get("image", "")
     color = product.get("color", "")
     specifications = product.get("specifications", "")
+    product_identity = identify_product(product)
 
-    product_key = name.lower().strip()
+    reference = resolve_reference(product_identity)
 
-    reference = products.get(product_key)
 
     warnings = []
 
@@ -122,9 +126,9 @@ def analyze_product(product):
 
         if color:
 
-            allowed_colors = reference["colors"]
+            allowed_colors = reference["allowed_colors"]
 
-            if color.lower() in allowed_colors:
+            if color.strip().lower() in [c.lower() for c in allowed_colors]:
 
                 color_risk = 5
 
