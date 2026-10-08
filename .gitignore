@@ -45,3 +45,6 @@ node_modules/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+# Local analysis results and temporary backups
+backend/storage/analysis_results/
+*.backup
