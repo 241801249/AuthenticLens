@@ -79,7 +79,7 @@ async function analyzeProduct() {
 
                         const response =
                             await fetch(
-                                "http://127.0.0.1:5000/analyze",
+                                "http://127.0.0.1:5050/analyze",
                                 {
                                     method: "POST",
 

@@ -79,10 +79,10 @@ def analyze_product(product):
         image_risk = similarity_result["risk"]
 
         if not similarity_result["success"]:
-
-            warnings.append(
-                "CLIP image similarity analysis failed"
-            )
+            if reference_images:
+                warnings.append("CLIP image similarity analysis failed")
+            else:
+                warnings.append("Image similarity not assessed: no product-specific reference images available")
 
     else:
 
