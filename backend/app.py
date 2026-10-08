@@ -1,7 +1,10 @@
+from uuid import uuid4
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 from services.product_analysis import analyze_product
+from services.analysis_repository import save_analysis_result
 
 
 app = Flask(__name__)
@@ -13,7 +16,7 @@ CORS(app)
 def home():
 
     return jsonify({
-        "message": "Counterfeit Detection API is running"
+        "message": "AuthenticLens API is running"
     })
 
 
@@ -23,6 +26,15 @@ def analyze():
     product = request.json
 
     result = analyze_product(product)
+
+    analysis_id = str(uuid4())
+
+    save_analysis_result(
+        result=result,
+        analysis_id=analysis_id,
+    )
+
+    result["analysis_id"] = analysis_id
 
     return jsonify(result)
 

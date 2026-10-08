@@ -7,6 +7,23 @@ def analyze_price(current_price, reference_price):
             "message": "Price information unavailable"
         }
 
+    try:
+        current_price = float(current_price)
+        reference_price = float(reference_price)
+    except (TypeError, ValueError):
+        return {
+            "risk": 50,
+            "difference": None,
+            "message": "Price information is invalid"
+        }
+
+    if reference_price <= 0 or current_price < 0:
+        return {
+            "risk": 50,
+            "difference": None,
+            "message": "Price information is invalid"
+        }
+
     difference = ((reference_price - current_price) / reference_price) * 100
 
     if difference >= 60:

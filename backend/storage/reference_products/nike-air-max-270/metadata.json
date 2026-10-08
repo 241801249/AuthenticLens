@@ -1,0 +1,12 @@
+{
+  "product_id": "nike-air-max-270",
+  "name": "Nike Air Max 270",
+  "brand": "Nike",
+  "reference_price": 12999,
+  "allowed_colors": [
+    "Black",
+    "White",
+    "Red"
+  ],
+  "source": "trusted_reference"
+}
